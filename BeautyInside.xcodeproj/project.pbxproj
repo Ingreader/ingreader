@@ -12,6 +12,7 @@
 		24C3822519410E2B00674D27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C3822319410E2B00674D27 /* Main.storyboard */; };
 		24C3822719410E2B00674D27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C3822619410E2B00674D27 /* Images.xcassets */; };
 		24C3823319410E2B00674D27 /* BeautyInsideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3823219410E2B00674D27 /* BeautyInsideTests.swift */; };
+		24C3823D19410FB700674D27 /* KWScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3823C19410FB700674D27 /* KWScannerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		24C3822C19410E2B00674D27 /* BeautyInsideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautyInsideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C3823119410E2B00674D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C3823219410E2B00674D27 /* BeautyInsideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyInsideTests.swift; sourceTree = "<group>"; };
+		24C3823C19410FB700674D27 /* KWScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWScannerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				24C3821F19410E2B00674D27 /* AppDelegate.swift */,
 				24C3822119410E2B00674D27 /* ViewController.swift */,
 				24C3822319410E2B00674D27 /* Main.storyboard */,
+				24C3823C19410FB700674D27 /* KWScannerViewController.swift */,
 				24C3822619410E2B00674D27 /* Images.xcassets */,
 				24C3821D19410E2B00674D27 /* Supporting Files */,
 			);
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C3823D19410FB700674D27 /* KWScannerViewController.swift in Sources */,
 				24C3822219410E2B00674D27 /* ViewController.swift in Sources */,
 				24C3822019410E2B00674D27 /* AppDelegate.swift in Sources */,
 			);
