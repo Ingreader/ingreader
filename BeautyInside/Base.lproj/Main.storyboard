@@ -16,11 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WLd-hS-0na">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WLd-hS-0na">
                                 <rect key="frame" x="0.0" y="22" width="480" height="436"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFL-b7-ehK">
                                 <rect key="frame" x="0.0" y="436" width="480" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ELz-II-49Y"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem systemItem="camera" id="o4w-86-7Kj">
                                         <connections>
@@ -35,9 +38,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aFL-b7-ehK" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="416" id="PP1-lP-37T"/>
-                            <constraint firstAttribute="trailing" secondItem="aFL-b7-ehK" secondAttribute="trailing" id="ZxL-lt-Y3x"/>
-                            <constraint firstItem="aFL-b7-ehK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="uSS-yu-PMy"/>
+                            <constraint firstItem="aFL-b7-ehK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0mV-PU-2iR"/>
+                            <constraint firstItem="WLd-hS-0na" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="2" id="4Fn-RE-MzF"/>
+                            <constraint firstItem="aFL-b7-ehK" firstAttribute="leading" secondItem="WLd-hS-0na" secondAttribute="leading" id="Dev-Rm-lOe"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="WLd-hS-0na" secondAttribute="bottom" constant="22" id="UdE-f1-aJV"/>
+                            <constraint firstItem="aFL-b7-ehK" firstAttribute="trailing" secondItem="WLd-hS-0na" secondAttribute="trailing" id="ihW-G4-9V1"/>
+                            <constraint firstAttribute="trailing" secondItem="aFL-b7-ehK" secondAttribute="trailing" id="lhd-YR-Xc5"/>
+                            <constraint firstAttribute="bottom" secondItem="aFL-b7-ehK" secondAttribute="bottom" id="vzW-xi-8Kx"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
