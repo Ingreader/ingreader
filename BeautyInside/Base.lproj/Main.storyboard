@@ -46,7 +46,6 @@
                             <constraint firstAttribute="trailing" secondItem="aFL-b7-ehK" secondAttribute="trailing" id="lhd-YR-Xc5"/>
                             <constraint firstAttribute="bottom" secondItem="aFL-b7-ehK" secondAttribute="bottom" id="vzW-xi-8Kx"/>
                         </constraints>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="WLd-hS-0na" id="q7W-sv-U8D"/>
