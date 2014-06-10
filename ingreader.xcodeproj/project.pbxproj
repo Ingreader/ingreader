@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2454561C194209E2005B6CE3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2454561B194209E2005B6CE3 /* Podfile */; };
 		24C3822019410E2B00674D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3821F19410E2B00674D27 /* AppDelegate.swift */; };
 		24C3822219410E2B00674D27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3822119410E2B00674D27 /* ViewController.swift */; };
 		24C3822519410E2B00674D27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C3822319410E2B00674D27 /* Main.storyboard */; };
 		24C3822719410E2B00674D27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C3822619410E2B00674D27 /* Images.xcassets */; };
-		24C3823319410E2B00674D27 /* BeautyInsideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3823219410E2B00674D27 /* BeautyInsideTests.swift */; };
+		24C3823319410E2B00674D27 /* ingreaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3823219410E2B00674D27 /* ingreaderTests.swift */; };
 		24C3823D19410FB700674D27 /* KWScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3823C19410FB700674D27 /* KWScannerViewController.swift */; };
-		F824DCC21DB445189BBF2700 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D6C9665CF44D2AD92817D /* libPods.a */; };
+		24E7928719420D9C0082EF6B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E7928619420D9C0082EF6B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,25 +23,26 @@
 			containerPortal = 24C3821219410E2B00674D27 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 24C3821919410E2B00674D27;
-			remoteInfo = BeautyInside;
+			remoteInfo = ingreader;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		136D6C9665CF44D2AD92817D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		24C3821A19410E2B00674D27 /* BeautyInside.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyInside.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2454561B194209E2005B6CE3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		24C3821A19410E2B00674D27 /* ingreader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ingreader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C3821E19410E2B00674D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C3821F19410E2B00674D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24C3822119410E2B00674D27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		24C3822419410E2B00674D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24C3822619410E2B00674D27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		24C3822C19410E2B00674D27 /* BeautyInsideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautyInsideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C3822C19410E2B00674D27 /* ingreaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ingreaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C3823119410E2B00674D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24C3823219410E2B00674D27 /* BeautyInsideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyInsideTests.swift; sourceTree = "<group>"; };
+		24C3823219410E2B00674D27 /* ingreaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ingreaderTests.swift; sourceTree = "<group>"; };
 		24C3823C19410FB700674D27 /* KWScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWScannerViewController.swift; sourceTree = "<group>"; };
-		24C3823E1941118200674D27 /* BeautyInside-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeautyInside-Bridging-Header.h"; sourceTree = "<group>"; };
+		24C3823E1941118200674D27 /* ingreader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ingreader-Bridging-Header.h"; sourceTree = "<group>"; };
+		24E7928619420D9C0082EF6B /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Build/Products/Debug-iphonesimulator/libPods.a"; sourceTree = "<group>"; };
 		24F1A6C21942056B004B4EFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		4659DCCA1512428E964F1E77 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		B70C2EC6BA0D4D49A3D01564 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F824DCC21DB445189BBF2700 /* libPods.a in Frameworks */,
+				24E7928719420D9C0082EF6B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,24 +67,25 @@
 		24C3821119410E2B00674D27 = {
 			isa = PBXGroup;
 			children = (
-				24C3821C19410E2B00674D27 /* BeautyInside */,
-				24C3822F19410E2B00674D27 /* BeautyInsideTests */,
+				24C3821C19410E2B00674D27 /* ingreader */,
+				24C3822F19410E2B00674D27 /* ingreaderTests */,
 				24C3821B19410E2B00674D27 /* Products */,
-				4659DCCA1512428E964F1E77 /* Pods.xcconfig */,
-				464C243ECC0A4A78B867090D /* Frameworks */,
+				2454561B194209E2005B6CE3 /* Podfile */,
+				B70C2EC6BA0D4D49A3D01564 /* Pods.xcconfig */,
+				3CF5F8C388424D5BADC5B01D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		24C3821B19410E2B00674D27 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24C3821A19410E2B00674D27 /* BeautyInside.app */,
-				24C3822C19410E2B00674D27 /* BeautyInsideTests.xctest */,
+				24C3821A19410E2B00674D27 /* ingreader.app */,
+				24C3822C19410E2B00674D27 /* ingreaderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		24C3821C19410E2B00674D27 /* BeautyInside */ = {
+		24C3821C19410E2B00674D27 /* ingreader */ = {
 			isa = PBXGroup;
 			children = (
 				24C3821F19410E2B00674D27 /* AppDelegate.swift */,
@@ -91,9 +94,10 @@
 				24C3823C19410FB700674D27 /* KWScannerViewController.swift */,
 				24C3822619410E2B00674D27 /* Images.xcassets */,
 				24C3821D19410E2B00674D27 /* Supporting Files */,
-				24C3823E1941118200674D27 /* BeautyInside-Bridging-Header.h */,
+				24C3823E1941118200674D27 /* ingreader-Bridging-Header.h */,
 			);
-			path = BeautyInside;
+			name = ingreader;
+			path = ingreader;
 			sourceTree = "<group>";
 		};
 		24C3821D19410E2B00674D27 /* Supporting Files */ = {
@@ -104,13 +108,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		24C3822F19410E2B00674D27 /* BeautyInsideTests */ = {
+		24C3822F19410E2B00674D27 /* ingreaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				24C3823219410E2B00674D27 /* BeautyInsideTests.swift */,
+				24C3823219410E2B00674D27 /* ingreaderTests.swift */,
 				24C3823019410E2B00674D27 /* Supporting Files */,
 			);
-			path = BeautyInsideTests;
+			path = ingreaderTests;
 			sourceTree = "<group>";
 		};
 		24C3823019410E2B00674D27 /* Supporting Files */ = {
@@ -121,10 +125,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		464C243ECC0A4A78B867090D /* Frameworks */ = {
+		3CF5F8C388424D5BADC5B01D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				136D6C9665CF44D2AD92817D /* libPods.a */,
+				24E7928619420D9C0082EF6B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,9 +136,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		24C3821919410E2B00674D27 /* BeautyInside */ = {
+		24C3821919410E2B00674D27 /* ingreader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24C3823619410E2B00674D27 /* Build configuration list for PBXNativeTarget "BeautyInside" */;
+			buildConfigurationList = 24C3823619410E2B00674D27 /* Build configuration list for PBXNativeTarget "ingreader" */;
 			buildPhases = (
 				D3F41EF07BB2484E89F3C7FB /* Check Pods Manifest.lock */,
 				24C3821619410E2B00674D27 /* Sources */,
@@ -146,14 +150,14 @@
 			);
 			dependencies = (
 			);
-			name = BeautyInside;
-			productName = BeautyInside;
-			productReference = 24C3821A19410E2B00674D27 /* BeautyInside.app */;
+			name = ingreader;
+			productName = ingreader;
+			productReference = 24C3821A19410E2B00674D27 /* ingreader.app */;
 			productType = "com.apple.product-type.application";
 		};
-		24C3822B19410E2B00674D27 /* BeautyInsideTests */ = {
+		24C3822B19410E2B00674D27 /* ingreaderTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24C3823919410E2B00674D27 /* Build configuration list for PBXNativeTarget "BeautyInsideTests" */;
+			buildConfigurationList = 24C3823919410E2B00674D27 /* Build configuration list for PBXNativeTarget "ingreaderTests" */;
 			buildPhases = (
 				24C3822819410E2B00674D27 /* Sources */,
 				24C3822919410E2B00674D27 /* Frameworks */,
@@ -164,9 +168,9 @@
 			dependencies = (
 				24C3822E19410E2B00674D27 /* PBXTargetDependency */,
 			);
-			name = BeautyInsideTests;
-			productName = BeautyInsideTests;
-			productReference = 24C3822C19410E2B00674D27 /* BeautyInsideTests.xctest */;
+			name = ingreaderTests;
+			productName = ingreaderTests;
+			productReference = 24C3822C19410E2B00674D27 /* ingreaderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -187,7 +191,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 24C3821519410E2B00674D27 /* Build configuration list for PBXProject "BeautyInside" */;
+			buildConfigurationList = 24C3821519410E2B00674D27 /* Build configuration list for PBXProject "ingreader" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -200,8 +204,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				24C3821919410E2B00674D27 /* BeautyInside */,
-				24C3822B19410E2B00674D27 /* BeautyInsideTests */,
+				24C3821919410E2B00674D27 /* ingreader */,
+				24C3822B19410E2B00674D27 /* ingreaderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2454561C194209E2005B6CE3 /* Podfile in Resources */,
 				24C3822519410E2B00674D27 /* Main.storyboard in Resources */,
 				24C3822719410E2B00674D27 /* Images.xcassets in Resources */,
 			);
@@ -273,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24C3823319410E2B00674D27 /* BeautyInsideTests.swift in Sources */,
+				24C3823319410E2B00674D27 /* ingreaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +287,7 @@
 /* Begin PBXTargetDependency section */
 		24C3822E19410E2B00674D27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 24C3821919410E2B00674D27 /* BeautyInside */;
+			target = 24C3821919410E2B00674D27 /* ingreader */;
 			targetProxy = 24C3822D19410E2B00674D27 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -379,37 +384,47 @@
 		};
 		24C3823719410E2B00674D27 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4659DCCA1512428E964F1E77 /* Pods.xcconfig */;
+			baseConfigurationReference = B70C2EC6BA0D4D49A3D01564 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = BeautyInside/Info.plist;
+				INFOPLIST_FILE = ingreader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "BeautyInside/BeautyInside-Bridging-Header.h";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
+				);
+				PRODUCT_NAME = ingreader;
+				SWIFT_OBJC_BRIDGING_HEADER = "ingreader/ingreader-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		24C3823819410E2B00674D27 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4659DCCA1512428E964F1E77 /* Pods.xcconfig */;
+			baseConfigurationReference = B70C2EC6BA0D4D49A3D01564 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = BeautyInside/Info.plist;
+				INFOPLIST_FILE = ingreader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "BeautyInside/BeautyInside-Bridging-Header.h";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
+				);
+				PRODUCT_NAME = ingreader;
+				SWIFT_OBJC_BRIDGING_HEADER = "ingreader/ingreader-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		24C3823A19410E2B00674D27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BeautyInside.app/BeautyInside";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ingreader.app/ingreader";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -418,10 +433,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = BeautyInsideTests/Info.plist;
+				INFOPLIST_FILE = ingreaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ingreaderTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -429,15 +444,15 @@
 		24C3823B19410E2B00674D27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BeautyInside.app/BeautyInside";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ingreader.app/ingreader";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = BeautyInsideTests/Info.plist;
+				INFOPLIST_FILE = ingreaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ingreaderTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -445,7 +460,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		24C3821519410E2B00674D27 /* Build configuration list for PBXProject "BeautyInside" */ = {
+		24C3821519410E2B00674D27 /* Build configuration list for PBXProject "ingreader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24C3823419410E2B00674D27 /* Debug */,
@@ -454,7 +469,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24C3823619410E2B00674D27 /* Build configuration list for PBXNativeTarget "BeautyInside" */ = {
+		24C3823619410E2B00674D27 /* Build configuration list for PBXNativeTarget "ingreader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24C3823719410E2B00674D27 /* Debug */,
@@ -463,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24C3823919410E2B00674D27 /* Build configuration list for PBXNativeTarget "BeautyInsideTests" */ = {
+		24C3823919410E2B00674D27 /* Build configuration list for PBXNativeTarget "ingreaderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24C3823A19410E2B00674D27 /* Debug */,

@@ -1,6 +1,6 @@
 //
-//  BeautyInsideTests.swift
-//  BeautyInsideTests
+//  ingreaderTests.swift
+//  ingreaderTests
 //
 //  Created by Kamila Wojciechowska on 05.06.2014.
 //  Copyright (c) 2014 silk. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class BeautyInsideTests: XCTestCase {
+class ingreaderTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
