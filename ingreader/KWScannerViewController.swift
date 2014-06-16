@@ -10,7 +10,23 @@ import Foundation
 import UIKit
 
 class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TesseractDelegate {
+    @IBOutlet var activityIndicator: UIActivityIndicatorView;
     @IBOutlet var imageView: UIImageView
+    var selectedImage = UIImage()
+    var ocrResult = NSString()
+    
+    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    init(coder aDecoder: NSCoder!)
+    {
+        super.init(coder: aDecoder)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.imageView.contentMode =  .ScaleAspectFit
+    }
+    
     @IBAction func takePicture(AnyObject) {
        
         let imagePicker: UIImagePickerController = UIImagePickerController()
@@ -27,34 +43,33 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
-
+        self.selectedImage = image
         self.imageView.image = image
-        self.recognizeImage(image)
-        self.dismissViewControllerAnimated(true, completion:nil)
-
-
+        picker.dismissViewControllerAnimated(true, completion:nil)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+             self.recognizeImage(image)
+        }
     }
     
     func recognizeImage (image: UIImage) -> Void {
-    
-        // language are used for recognition. Ex: eng. Tesseract will search for a eng.traineddata file in the dataPath directory; eng+ita will search for a eng.traineddata and ita.traineddata.
-        
-        //Like in the Template Framework Project:
-        // Assumed that .traineddata files are in your "tessdata" folder and the folder is in the root of the project.
-        // Assumed, that you added a folder references "tessdata" into your xCode project tree, with the ‘Create folder references for any added folders’ options set up in the «Add files to project» dialog.
-        // Assumed that any .traineddata files is in the tessdata folder, like in the Template Framework Project
-        
-   
+        dispatch_async(dispatch_get_main_queue()) {
+            self.activityIndicator.startAnimating()
+        }
         
         let tesseract:Tesseract  = Tesseract(language: "eng")
         tesseract.delegate = self;
 
-      //  tesseract.setVariableValueForKey("0123456789", "tessedit_char_whitelist") //limit search
+        tesseract.setVariableValue("abcdefghijklmnopqrstuwxyz,()/01234567890", forKey:"tessedit_char_whitelist") //limit search
         tesseract.image =  image //image to check
-        let result = tesseract.recognize
-        let pref = getenv("TESSDATA_PREFIX")
-        println("OUTPUT ---\(pref)---")
-        println("\(tesseract.recognizedText)")
+        tesseract.recognize()
+        ocrResult =  tesseract.recognizedText
+        dispatch_async(dispatch_get_main_queue()) {
+            self.activityIndicator.stopAnimating()
+            var alert = UIAlertController(title:"Ingreadients found:", message: self.ocrResult,  preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "GReat!", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+
     }
     
     

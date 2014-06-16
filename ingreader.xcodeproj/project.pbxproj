@@ -14,7 +14,12 @@
 		24C3822719410E2B00674D27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C3822619410E2B00674D27 /* Images.xcassets */; };
 		24C3823319410E2B00674D27 /* ingreaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3823219410E2B00674D27 /* ingreaderTests.swift */; };
 		24C3823D19410FB700674D27 /* KWScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3823C19410FB700674D27 /* KWScannerViewController.swift */; };
-		24E7928719420D9C0082EF6B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E7928619420D9C0082EF6B /* libPods.a */; };
+		24DB1750194F7D8100EB5165 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DB174F194F7D8100EB5165 /* libstdc++.6.0.9.dylib */; };
+		24DB1752194F7D8800EB5165 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DB1751194F7D8800EB5165 /* CoreGraphics.framework */; };
+		24DB1754194F7D9100EB5165 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DB1753194F7D9100EB5165 /* UIKit.framework */; };
+		24DB1756194F7D9800EB5165 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DB1755194F7D9800EB5165 /* Foundation.framework */; };
+		24DB1776194F888200EB5165 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 24DB1775194F888200EB5165 /* tessdata */; };
+		9DE87141C8C04D66A61D5A5B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8B2590217A4BD1848FD317 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2454561B194209E2005B6CE3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		1D8B2590217A4BD1848FD317 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2454561B194209E2005B6CE3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		24C3821A19410E2B00674D27 /* ingreader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ingreader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C3821E19410E2B00674D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C3821F19410E2B00674D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,9 +46,13 @@
 		24C3823219410E2B00674D27 /* ingreaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ingreaderTests.swift; sourceTree = "<group>"; };
 		24C3823C19410FB700674D27 /* KWScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWScannerViewController.swift; sourceTree = "<group>"; };
 		24C3823E1941118200674D27 /* ingreader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ingreader-Bridging-Header.h"; sourceTree = "<group>"; };
-		24E7928619420D9C0082EF6B /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Build/Products/Debug-iphonesimulator/libPods.a"; sourceTree = "<group>"; };
+		24DB174F194F7D8100EB5165 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		24DB1751194F7D8800EB5165 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		24DB1753194F7D9100EB5165 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		24DB1755194F7D9800EB5165 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		24DB1775194F888200EB5165 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		24F1A6C21942056B004B4EFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		B70C2EC6BA0D4D49A3D01564 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		9AEE0DA1D3A34B5296BB09F1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +60,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24E7928719420D9C0082EF6B /* libPods.a in Frameworks */,
+				24DB1750194F7D8100EB5165 /* libstdc++.6.0.9.dylib in Frameworks */,
+				24DB1752194F7D8800EB5165 /* CoreGraphics.framework in Frameworks */,
+				24DB1754194F7D9100EB5165 /* UIKit.framework in Frameworks */,
+				24DB1756194F7D9800EB5165 /* Foundation.framework in Frameworks */,
+				9DE87141C8C04D66A61D5A5B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,9 +84,9 @@
 				24C3821C19410E2B00674D27 /* ingreader */,
 				24C3822F19410E2B00674D27 /* ingreaderTests */,
 				24C3821B19410E2B00674D27 /* Products */,
-				2454561B194209E2005B6CE3 /* Podfile */,
-				B70C2EC6BA0D4D49A3D01564 /* Pods.xcconfig */,
 				3CF5F8C388424D5BADC5B01D /* Frameworks */,
+				2454561B194209E2005B6CE3 /* Podfile */,
+				9AEE0DA1D3A34B5296BB09F1 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,15 +102,15 @@
 		24C3821C19410E2B00674D27 /* ingreader */ = {
 			isa = PBXGroup;
 			children = (
+				24DB1775194F888200EB5165 /* tessdata */,
 				24C3821F19410E2B00674D27 /* AppDelegate.swift */,
 				24C3822119410E2B00674D27 /* ViewController.swift */,
-				24C3822319410E2B00674D27 /* Main.storyboard */,
 				24C3823C19410FB700674D27 /* KWScannerViewController.swift */,
+				24C3822319410E2B00674D27 /* Main.storyboard */,
 				24C3822619410E2B00674D27 /* Images.xcassets */,
 				24C3821D19410E2B00674D27 /* Supporting Files */,
 				24C3823E1941118200674D27 /* ingreader-Bridging-Header.h */,
 			);
-			name = ingreader;
 			path = ingreader;
 			sourceTree = "<group>";
 		};
@@ -128,7 +142,11 @@
 		3CF5F8C388424D5BADC5B01D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				24E7928619420D9C0082EF6B /* libPods.a */,
+				24DB1755194F7D9800EB5165 /* Foundation.framework */,
+				24DB1753194F7D9100EB5165 /* UIKit.framework */,
+				24DB1751194F7D8800EB5165 /* CoreGraphics.framework */,
+				24DB174F194F7D8100EB5165 /* libstdc++.6.0.9.dylib */,
+				1D8B2590217A4BD1848FD317 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2454561C194209E2005B6CE3 /* Podfile in Resources */,
+				24DB1776194F888200EB5165 /* tessdata in Resources */,
 				24C3822519410E2B00674D27 /* Main.storyboard in Resources */,
 				24C3822719410E2B00674D27 /* Images.xcassets in Resources */,
 			);
@@ -309,7 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -351,7 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -384,11 +403,15 @@
 		};
 		24C3823719410E2B00674D27 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B70C2EC6BA0D4D49A3D01564 /* Pods.xcconfig */;
+			baseConfigurationReference = 9AEE0DA1D3A34B5296BB09F1 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ingreader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -404,11 +427,15 @@
 		};
 		24C3823819410E2B00674D27 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B70C2EC6BA0D4D49A3D01564 /* Pods.xcconfig */;
+			baseConfigurationReference = 9AEE0DA1D3A34B5296BB09F1 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ingreader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
