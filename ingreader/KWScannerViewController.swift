@@ -46,8 +46,20 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         self.selectedImage = image
         self.imageView.image = image
         picker.dismissViewControllerAnimated(true, completion:nil)
+        dispatch_async(dispatch_get_main_queue()) {
+            self.activityIndicator.startAnimating()
+        }
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-             self.recognizeImage(image)
+            //self.recognizeImage(image)
+            let resultSharp = KWFilters.sharpenImage(image)
+            let result = KWFilters.binarizeImage(resultSharp)
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                self.activityIndicator.stopAnimating()
+                self.selectedImage = result
+                self.imageView.image = result
+            }
+            
         }
     }
     
@@ -57,7 +69,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         }
         
         let tesseract:Tesseract  = Tesseract(language: "eng")
-        tesseract.delegate = self;
+        tesseract.delegate = self
 
         tesseract.setVariableValue("abcdefghijklmnopqrstuwxyz,()/01234567890", forKey:"tessedit_char_whitelist") //limit search
         tesseract.image =  image //image to check

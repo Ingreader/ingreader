@@ -10,6 +10,7 @@
 		2454561C194209E2005B6CE3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2454561B194209E2005B6CE3 /* Podfile */; };
 		24714E031951C7570091DA29 /* probka1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24714E021951C7570091DA29 /* probka1x.png */; };
 		24901CDF196825BE00A79DE1 /* probka1x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24901CDE196825BE00A79DE1 /* probka1x.jpg */; };
+		24901CE119682BCA00A79DE1 /* KWFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24901CE019682BCA00A79DE1 /* KWFilters.swift */; };
 		24C3822019410E2B00674D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3821F19410E2B00674D27 /* AppDelegate.swift */; };
 		24C3822219410E2B00674D27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3822119410E2B00674D27 /* ViewController.swift */; };
 		24C3822519410E2B00674D27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C3822319410E2B00674D27 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		24714E001951B58E0091DA29 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		24714E021951C7570091DA29 /* probka1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = probka1x.png; sourceTree = "<group>"; };
 		24901CDE196825BE00A79DE1 /* probka1x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = probka1x.jpg; sourceTree = "<group>"; };
+		24901CE019682BCA00A79DE1 /* KWFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWFilters.swift; sourceTree = "<group>"; };
 		24C3821A19410E2B00674D27 /* ingreader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ingreader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C3821E19410E2B00674D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C3821F19410E2B00674D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				24C3822619410E2B00674D27 /* Images.xcassets */,
 				24C3821D19410E2B00674D27 /* Supporting Files */,
 				24C3823E1941118200674D27 /* ingreader-Bridging-Header.h */,
+				24901CE019682BCA00A79DE1 /* KWFilters.swift */,
 			);
 			path = ingreader;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24C3823D19410FB700674D27 /* KWScannerViewController.swift in Sources */,
+				24901CE119682BCA00A79DE1 /* KWFilters.swift in Sources */,
 				24C3822219410E2B00674D27 /* ViewController.swift in Sources */,
 				24C3822019410E2B00674D27 /* AppDelegate.swift in Sources */,
 			);
