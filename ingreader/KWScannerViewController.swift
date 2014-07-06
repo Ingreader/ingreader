@@ -41,26 +41,54 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
 
         self.presentViewController(imagePicker, animated: true, nil)
     }
+
+    @IBAction func owsiar(AnyObject) {
+        self.recognizeImage(self.selectedImage)
+    }
+    
+    @IBAction func sharpening(AnyObject) {
+        dispatch_async(dispatch_get_main_queue()) {
+            self.activityIndicator.startAnimating()
+        }
+        let result = KWFilters.sharpenImage(self.imageView.image)
+        dispatch_async(dispatch_get_main_queue()) {
+            self.activityIndicator.stopAnimating()
+            self.selectedImage = result
+            self.imageView.image = result
+        }
+    }
+    
+    @IBAction func monochrome(AnyObject) {
+        dispatch_async(dispatch_get_main_queue()) {
+            self.activityIndicator.startAnimating()
+        }
+        let result = KWFilters.binarizeImage(self.imageView.image)
+        dispatch_async(dispatch_get_main_queue()) {
+            self.activityIndicator.stopAnimating()
+            self.selectedImage = result
+            self.imageView.image = result
+        }
+    }
+    
+    @IBAction func binarize(AnyObject) {
+        let result = KWFilters.customBinarizeImage(self.imageView.image)
+        dispatch_async(dispatch_get_main_queue()) {
+            self.activityIndicator.startAnimating()
+        }
+
+        dispatch_async(dispatch_get_main_queue()) {
+            self.activityIndicator.stopAnimating()
+            self.selectedImage = result
+            self.imageView.image = result
+        }
+    }
+    
+
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
         self.selectedImage = image
         self.imageView.image = image
         picker.dismissViewControllerAnimated(true, completion:nil)
-        dispatch_async(dispatch_get_main_queue()) {
-            self.activityIndicator.startAnimating()
-        }
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            //self.recognizeImage(image)
-            let resultSharp = KWFilters.sharpenImage(image)
-            let result = KWFilters.binarizeImage(resultSharp)
-            
-            dispatch_async(dispatch_get_main_queue()) {
-                self.activityIndicator.stopAnimating()
-                self.selectedImage = result
-                self.imageView.image = result
-            }
-            
-        }
     }
     
     func recognizeImage (image: UIImage) -> Void {
@@ -78,7 +106,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         dispatch_async(dispatch_get_main_queue()) {
             self.activityIndicator.stopAnimating()
             var alert = UIAlertController(title:"Ingreadients found:", message: self.ocrResult,  preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "GReat!", style: UIAlertActionStyle.Default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
 
