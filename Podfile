@@ -5,4 +5,3 @@ inhibit_all_warnings!
 
 pod 'TesseractOCRiOS', '~> 2.22'
 pod 'ImageMagick'
-pod 'OpenCV'
