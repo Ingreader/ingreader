@@ -62,6 +62,9 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WW9-tc-pYz">
                                 <rect key="frame" x="230" y="230" width="20" height="20"/>
                             </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IW5-bw-Q9L">
+                                <rect key="frame" x="164" y="420" width="150" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -71,6 +74,7 @@
                             <constraint firstAttribute="centerY" secondItem="WW9-tc-pYz" secondAttribute="centerY" id="Kij-K9-J2q"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="WLd-hS-0na" secondAttribute="bottom" constant="44" id="UdE-f1-aJV"/>
                             <constraint firstAttribute="centerX" secondItem="WW9-tc-pYz" secondAttribute="centerX" id="Xf1-23-qoh"/>
+                            <constraint firstAttribute="centerX" secondItem="IW5-bw-Q9L" secondAttribute="centerX" id="dkv-EU-y4F"/>
                             <constraint firstItem="aFL-b7-ehK" firstAttribute="trailing" secondItem="WLd-hS-0na" secondAttribute="trailing" id="ihW-G4-9V1"/>
                             <constraint firstAttribute="trailing" secondItem="aFL-b7-ehK" secondAttribute="trailing" id="lhd-YR-Xc5"/>
                             <constraint firstAttribute="bottom" secondItem="aFL-b7-ehK" secondAttribute="bottom" id="vzW-xi-8Kx"/>
@@ -81,6 +85,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="WW9-tc-pYz" id="6pP-mu-fwh"/>
                         <outlet property="imageView" destination="WLd-hS-0na" id="q7W-sv-U8D"/>
+                        <outlet property="ocrProgress" destination="IW5-bw-Q9L" id="HrG-sp-4bH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -12,6 +12,7 @@ import UIKit
 class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TesseractDelegate {
     @IBOutlet var activityIndicator: UIActivityIndicatorView;
     @IBOutlet var imageView: UIImageView
+    @IBOutlet var ocrProgress: UIProgressView
     var selectedImage = UIImage()
     var ocrResult = NSString()
     
@@ -25,6 +26,8 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     
     override func viewWillAppear(animated: Bool) {
         self.imageView.contentMode =  .ScaleAspectFit
+       self.ocrProgress.progress = 0.0
+        self.ocrProgress.hidden = true
     }
     
     @IBAction func takePicture(AnyObject) {
@@ -43,18 +46,32 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     }
 
     @IBAction func owsiar(AnyObject) {
-        self.recognizeImage(self.selectedImage)
+        dispatch_async(dispatch_get_main_queue()) {
+            self.activityIndicator.startAnimating()
+                    self.ocrProgress.hidden = false
+        }
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            self.recognizeImage(self.selectedImage)
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                self.activityIndicator.stopAnimating()
+                self.ocrProgress.hidden = true
+            }
+        }
     }
     
     @IBAction func sharpening(AnyObject) {
         dispatch_async(dispatch_get_main_queue()) {
             self.activityIndicator.startAnimating()
         }
-        let result = KWFilters.sharpenImage(self.imageView.image)
-        dispatch_async(dispatch_get_main_queue()) {
-            self.activityIndicator.stopAnimating()
-            self.selectedImage = result
-            self.imageView.image = result
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            let result = KWFilters.sharpenImage(self.imageView.image)
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                self.activityIndicator.stopAnimating()
+                self.selectedImage = result
+                self.imageView.image = result
+            }
         }
     }
     
@@ -62,24 +79,30 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         dispatch_async(dispatch_get_main_queue()) {
             self.activityIndicator.startAnimating()
         }
-        let result = KWFilters.binarizeImage(self.imageView.image)
-        dispatch_async(dispatch_get_main_queue()) {
-            self.activityIndicator.stopAnimating()
-            self.selectedImage = result
-            self.imageView.image = result
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+           let result = KWFilters.binarizeImage(self.imageView.image)
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                self.activityIndicator.stopAnimating()
+                self.selectedImage = result
+                self.imageView.image = result
+            }
         }
     }
     
     @IBAction func binarize(AnyObject) {
-        let result = KWFilters.customBinarizeImage(self.imageView.image)
+        
         dispatch_async(dispatch_get_main_queue()) {
             self.activityIndicator.startAnimating()
         }
-
-        dispatch_async(dispatch_get_main_queue()) {
-            self.activityIndicator.stopAnimating()
-            self.selectedImage = result
-            self.imageView.image = result
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            let result = KWFilters.customBinarizeImage(self.imageView.image)
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                self.activityIndicator.stopAnimating()
+                self.selectedImage = result
+                self.imageView.image = result
+            }
         }
     }
     
@@ -114,7 +137,8 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     
     
     func shouldCancelImageRecognitionForTesseract(tesseract: Tesseract) -> Bool {
-        println("progress_____________: \(tesseract.progress)");
+        println("progress_____________: \(Float(tesseract.progress))");
+        self.ocrProgress.progress = Float(tesseract.progress)
         return false;  // return YES, if you need to interrupt tesseract before it finishes
     }
     
