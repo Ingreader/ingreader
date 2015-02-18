@@ -44,6 +44,8 @@
 		24714E021951C7570091DA29 /* probka1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = probka1x.png; sourceTree = "<group>"; };
 		24901CDE196825BE00A79DE1 /* probka1x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = probka1x.jpg; sourceTree = "<group>"; };
 		24901CE019682BCA00A79DE1 /* KWFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWFilters.swift; sourceTree = "<group>"; };
+		249E7FE51A95388600BE8C0D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		249E7FE61A95388D00BE8C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		249E7FE71A953B1100BE8C0D /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		24B8918D19694D920092D5CD /* KWBinarizeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWBinarizeFilter.h; sourceTree = "<group>"; };
 		24B8918E19694D920092D5CD /* KWBinarizeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWBinarizeFilter.m; sourceTree = "<group>"; };
@@ -51,7 +53,6 @@
 		24C3821E19410E2B00674D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C3821F19410E2B00674D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24C3822119410E2B00674D27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		24C3822419410E2B00674D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24C3822619410E2B00674D27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		24C3822C19410E2B00674D27 /* ingreaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ingreaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C3823119410E2B00674D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		24DB1751194F7D8800EB5165 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		24DB1753194F7D9100EB5165 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24DB1755194F7D9800EB5165 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		24F1A6C21942056B004B4EFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		9AEE0DA1D3A34B5296BB09F1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -337,8 +337,8 @@
 		24C3822319410E2B00674D27 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				24C3822419410E2B00674D27 /* Base */,
-				24F1A6C21942056B004B4EFD /* en */,
+				249E7FE51A95388600BE8C0D /* en */,
+				249E7FE61A95388D00BE8C0D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

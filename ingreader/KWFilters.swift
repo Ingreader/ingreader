@@ -10,7 +10,7 @@ import UIKit
 
 class KWFilters: CIFilter {
     
-    class func sharpenImage(image: UIImage) -> (output: UIImage)  {
+    class func sharpenImage(image: UIImage) -> (UIImage)  {
         let context = UIGraphicsGetCurrentContext()
         let ciContext = CIContext(options: nil)
         let coreImage = CIImage(image: image)
@@ -27,12 +27,11 @@ class KWFilters: CIFilter {
         let filteredImageRef = ciContext.createCGImage(filteredImageData, fromRect: filteredImageData.extent())
         // this is our final UIImage ready to be displayed
         let filteredImage = UIImage(CGImage: filteredImageRef);
-        
-        return filteredImage;
-        
+        return filteredImage!;
+
     }
     
-    class func binarizeImage(image: UIImage) -> (output: UIImage)  {
+    class func binarizeImage(image: UIImage) -> (UIImage)  {
         let context = UIGraphicsGetCurrentContext()
         let ciContext = CIContext(options: nil)
         let coreImage = CIImage(image: image)
@@ -48,12 +47,11 @@ class KWFilters: CIFilter {
         let filteredImageData = filter.valueForKey(kCIOutputImageKey) as CIImage
         let filteredImageRef = ciContext.createCGImage(filteredImageData, fromRect: filteredImageData.extent())
         let filteredImage = UIImage(CGImage: filteredImageRef);
-        
-        return filteredImage;
+        return filteredImage!;
         
     }
     
-    class func customBinarizeImage(image: UIImage) -> (output: UIImage)  {
+    class func customBinarizeImage(image: UIImage) -> (UIImage)  {
         let context = UIGraphicsGetCurrentContext()
         let ciContext = CIContext(options: nil)
         let coreImage = CIImage(image: image)
@@ -64,8 +62,7 @@ class KWFilters: CIFilter {
         if let filteredImageData = filter.outputImage {
             let filteredImageRef = ciContext.createCGImage(filteredImageData, fromRect: filteredImageData.extent())
             let filteredImage = UIImage(CGImage: filteredImageRef);
-            
-            return filteredImage
+            return filteredImage!;
         }
         return UIImage()
     }
