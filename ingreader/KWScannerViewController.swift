@@ -60,7 +60,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
             self.activityIndicator.startAnimating()
         }
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let result = KWFilters.sharpenImage(self.imageView.image)
+            let result = KWFilters.sharpenImage(self.imageView.image!)
             
             dispatch_async(dispatch_get_main_queue()) {
                 self.activityIndicator.stopAnimating()
