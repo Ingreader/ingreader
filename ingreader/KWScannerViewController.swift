@@ -127,14 +127,22 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
             alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
+    }
+    
+
+    
+
 
     }
     
-    
-    func shouldCancelImageRecognitionForTesseract(tesseract: Tesseract) -> Bool {
-        println("progress_____________: \(Float(tesseract.progress))");
-        self.ocrProgress.progress = Float(tesseract.progress)
+}
+extension KWScannerViewController: G8TesseractDelegate {
+    func shouldCancelImageRecognitionForTesseract(tesseract: G8Tesseract) -> Bool {
+        var percent = CFloat(tesseract.progress)/100.0
+        var progressPercentString = NSString(format:"%.03f", (CFloat(tesseract.progress)/100.0))
+        var progressPercent = CFloat(progressPercentString.doubleValue)
+        self.ocrProgress.setProgress(percent, animated: true)
+        println("progress_____________: \(self.ocrProgress.progress) --  \(CFloat(progressPercentString.doubleValue)) --- \(progressPercentString)");
         return false;  // return YES, if you need to interrupt tesseract before it finishes
     }
-    
 }
