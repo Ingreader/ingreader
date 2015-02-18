@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TesseractDelegate {
+class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, G8TesseractDelegate {
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var ocrProgress: UIProgressView!
@@ -26,18 +26,41 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     @IBAction func takePicture(AnyObject) {
-       
-        let imagePicker: UIImagePickerController = UIImagePickerController()
+
+        let imagePickerActionSheet = UIAlertController(title: "Take photo or select exsiting?",
+            message: nil, preferredStyle: .ActionSheet)
         
-        if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) ) {
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-        } else {
-            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            let cameraButton = UIAlertAction(title: "Take Photo",
+                style: .Default) { (alert) -> Void in
+                    let imagePicker = UIImagePickerController()
+                    imagePicker.delegate = self
+                    imagePicker.sourceType = .Camera
+                    self.presentViewController(imagePicker,
+                        animated: true,
+                        completion: nil)
+            }
+            imagePickerActionSheet.addAction(cameraButton)
         }
         
-        imagePicker.delegate = self
-
-        self.presentViewController(imagePicker, animated: true, nil)
+        let libraryButton = UIAlertAction(title: "Choose Existing",
+            style: .Default) { (alert) -> Void in
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = .PhotoLibrary
+                self.presentViewController(imagePicker,
+                    animated: true,
+                    completion: nil)
+        }
+        imagePickerActionSheet.addAction(libraryButton)
+        
+        let cancelButton = UIAlertAction(title: "Cancel",
+            style: .Cancel) { (alert) -> Void in
+        }
+        imagePickerActionSheet.addAction(cancelButton)
+        
+        presentViewController(imagePickerActionSheet, animated: true,
+            completion: nil)
     }
 
     @IBAction func owsiar(AnyObject) {
