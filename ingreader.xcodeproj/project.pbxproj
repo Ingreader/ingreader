@@ -11,6 +11,7 @@
 		24714E031951C7570091DA29 /* probka1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24714E021951C7570091DA29 /* probka1x.png */; };
 		24901CDF196825BE00A79DE1 /* probka1x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24901CDE196825BE00A79DE1 /* probka1x.jpg */; };
 		24901CE119682BCA00A79DE1 /* KWFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24901CE019682BCA00A79DE1 /* KWFilters.swift */; };
+		249E7FE81A953B1100BE8C0D /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 249E7FE71A953B1100BE8C0D /* tessdata */; };
 		24B8918F19694D920092D5CD /* KWBinarizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B8918E19694D920092D5CD /* KWBinarizeFilter.m */; };
 		24C3822019410E2B00674D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3821F19410E2B00674D27 /* AppDelegate.swift */; };
 		24C3822219410E2B00674D27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3822119410E2B00674D27 /* ViewController.swift */; };
@@ -22,7 +23,6 @@
 		24DB1752194F7D8800EB5165 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DB1751194F7D8800EB5165 /* CoreGraphics.framework */; };
 		24DB1754194F7D9100EB5165 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DB1753194F7D9100EB5165 /* UIKit.framework */; };
 		24DB1756194F7D9800EB5165 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DB1755194F7D9800EB5165 /* Foundation.framework */; };
-		24DB1776194F888200EB5165 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 24DB1775194F888200EB5165 /* tessdata */; };
 		9DE87141C8C04D66A61D5A5B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8B2590217A4BD1848FD317 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +44,7 @@
 		24714E021951C7570091DA29 /* probka1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = probka1x.png; sourceTree = "<group>"; };
 		24901CDE196825BE00A79DE1 /* probka1x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = probka1x.jpg; sourceTree = "<group>"; };
 		24901CE019682BCA00A79DE1 /* KWFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWFilters.swift; sourceTree = "<group>"; };
+		249E7FE71A953B1100BE8C0D /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		24B8918D19694D920092D5CD /* KWBinarizeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWBinarizeFilter.h; sourceTree = "<group>"; };
 		24B8918E19694D920092D5CD /* KWBinarizeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWBinarizeFilter.m; sourceTree = "<group>"; };
 		24C3821A19410E2B00674D27 /* ingreader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ingreader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +62,6 @@
 		24DB1751194F7D8800EB5165 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		24DB1753194F7D9100EB5165 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24DB1755194F7D9800EB5165 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		24DB1775194F888200EB5165 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		24F1A6C21942056B004B4EFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		9AEE0DA1D3A34B5296BB09F1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,12 +113,12 @@
 		24C3821C19410E2B00674D27 /* ingreader */ = {
 			isa = PBXGroup;
 			children = (
+				249E7FE71A953B1100BE8C0D /* tessdata */,
 				24B8918D19694D920092D5CD /* KWBinarizeFilter.h */,
 				24B8918E19694D920092D5CD /* KWBinarizeFilter.m */,
 				24901CDE196825BE00A79DE1 /* probka1x.jpg */,
 				24714E021951C7570091DA29 /* probka1x.png */,
 				24714DFA1951B1520091DA29 /* ImagePlayground.playground */,
-				24DB1775194F888200EB5165 /* tessdata */,
 				24C3821F19410E2B00674D27 /* AppDelegate.swift */,
 				24C3822119410E2B00674D27 /* ViewController.swift */,
 				24C3823C19410FB700674D27 /* KWScannerViewController.swift */,
@@ -253,10 +253,10 @@
 			files = (
 				2454561C194209E2005B6CE3 /* Podfile in Resources */,
 				24714E031951C7570091DA29 /* probka1x.png in Resources */,
-				24DB1776194F888200EB5165 /* tessdata in Resources */,
 				24C3822519410E2B00674D27 /* Main.storyboard in Resources */,
 				24C3822719410E2B00674D27 /* Images.xcassets in Resources */,
 				24901CDF196825BE00A79DE1 /* probka1x.jpg in Resources */,
+				249E7FE81A953B1100BE8C0D /* tessdata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
