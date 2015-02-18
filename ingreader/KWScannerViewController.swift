@@ -66,7 +66,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     @IBAction func owsiar(AnyObject) {
         dispatch_async(dispatch_get_main_queue()) {
             self.activityIndicator.startAnimating()
-                    self.ocrProgress.hidden = false
+            self.ocrProgress.hidden = false
         }
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             self.recognizeImage(self.selectedImage)
