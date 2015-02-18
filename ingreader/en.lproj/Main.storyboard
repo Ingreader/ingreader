@@ -63,7 +63,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WLd-hS-0na">
                                 <rect key="frame" x="0.0" y="64" width="600" height="490"/>
                             </imageView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="IW5-bw-Q9L">
+                            <progressView contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="IW5-bw-Q9L">
                                 <rect key="frame" x="0.0" y="554" width="600" height="2"/>
                                 <color key="progressTintColor" red="0.78823536630000002" green="0.1960784495" blue="0.53725492949999998" alpha="1" colorSpace="deviceRGB"/>
                             </progressView>

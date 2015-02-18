@@ -192,8 +192,9 @@ extension KWScannerViewController: G8TesseractDelegate {
         var percent = CFloat(tesseract.progress)/100.0
         var progressPercentString = NSString(format:"%.03f", (CFloat(tesseract.progress)/100.0))
         var progressPercent = CFloat(progressPercentString.doubleValue)
-        self.ocrProgress.setProgress(percent, animated: true)
-        println("progress_____________: \(self.ocrProgress.progress) --  \(CFloat(progressPercentString.doubleValue)) --- \(progressPercentString)");
+        dispatch_async(dispatch_get_main_queue()) {
+            self.ocrProgress.setProgress(percent, animated: true)
+        }
         return false;  // return YES, if you need to interrupt tesseract before it finishes
     }
 }
