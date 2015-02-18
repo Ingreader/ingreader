@@ -16,9 +16,6 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     var selectedImage = UIImage()
     var ocrResult = NSString()
     
-    }
-    }
-    
     override func viewWillAppear(animated: Bool) {
         self.imageView.contentMode =  .ScaleAspectFit
         self.ocrProgress.progress = 0.0
