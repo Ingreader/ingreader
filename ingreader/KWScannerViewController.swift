@@ -129,13 +129,20 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         dispatch_async(dispatch_get_main_queue()) {
             self.activityIndicator.startAnimating()
         }
-        
-        let tesseract:Tesseract  = Tesseract(language: "eng")
-        tesseract.delegate = self
 
-        tesseract.setVariableValue("abcdefghijklmnopqrstuwxyz,()/01234567890", forKey:"tessedit_char_whitelist") //limit search
+        let tesseract = G8Tesseract(language:"eng")
+        tesseract.delegate = self
+        tesseract.engineMode = .TesseractCubeCombined
+        tesseract.pageSegmentationMode = .Auto
+        tesseract.maximumRecognitionTime = 60.0
+        tesseract.image = image.g8_blackAndWhite()
+
+        tesseract.charWhitelist = "abcdefghijklmnopqrstuwxyz,()/01234567890" //limit search
         tesseract.image =  image //image to check
         tesseract.recognize()
+        //TODO prevent crash on clicking ocr when no image selected
+
+        
         ocrResult =  tesseract.recognizedText
         dispatch_async(dispatch_get_main_queue()) {
             self.activityIndicator.stopAnimating()
