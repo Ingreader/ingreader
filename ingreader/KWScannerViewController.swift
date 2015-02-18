@@ -98,12 +98,13 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
             self.activityIndicator.startAnimating()
         }
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-           let result = KWFilters.binarizeImage(self.imageView.image)
-            
-            dispatch_async(dispatch_get_main_queue()) {
-                self.activityIndicator.stopAnimating()
-                self.selectedImage = result
-                self.imageView.image = result
+            if (self.imageView.image != nil) {
+                let result = KWFilters.binarizeImage(self.imageView.image!)
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.activityIndicator.stopAnimating()
+                    self.selectedImage = result
+                    self.imageView.image = result
+                }
             }
         }
     }
@@ -114,7 +115,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
             self.activityIndicator.startAnimating()
         }
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let result = KWFilters.customBinarizeImage(self.imageView.image)
+            let result = KWFilters.customBinarizeImage(self.imageView.image!)
             
             dispatch_async(dispatch_get_main_queue()) {
                 self.activityIndicator.stopAnimating()
