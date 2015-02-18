@@ -21,7 +21,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     
     override func viewWillAppear(animated: Bool) {
         self.imageView.contentMode =  .ScaleAspectFit
-       self.ocrProgress.progress = 0.0
+        self.ocrProgress.progress = 0.0
         self.ocrProgress.hidden = true
     }
     
