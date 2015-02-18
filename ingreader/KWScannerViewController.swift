@@ -16,12 +16,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     var selectedImage = UIImage()
     var ocrResult = NSString()
     
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-    init(coder aDecoder: NSCoder!)
-    {
-        super.init(coder: aDecoder)
     }
     
     override func viewWillAppear(animated: Bool) {
