@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TesseractDelegate {
-    @IBOutlet var activityIndicator: UIActivityIndicatorView;
-    @IBOutlet var imageView: UIImageView
-    @IBOutlet var ocrProgress: UIProgressView
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var ocrProgress: UIProgressView!
     var selectedImage = UIImage()
     var ocrResult = NSString()
     
