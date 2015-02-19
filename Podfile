@@ -7,3 +7,4 @@ inhibit_all_warnings!
 
 pod 'TesseractOCRiOS', :git => 'https://github.com/gali8/Tesseract-OCR-iOS.git'
 pod 'ImageMagick'
+pod 'Reveal-iOS-SDK', :configurations => ['Debug']

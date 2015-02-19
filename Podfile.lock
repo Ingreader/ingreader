@@ -8,10 +8,12 @@ PODS:
   - ImageMagick/png (6.8.8-9)
   - ImageMagick/tiff (6.8.8-9)
   - ImageMagick/wand (6.8.8-9)
+  - Reveal-iOS-SDK (1.5.0)
   - TesseractOCRiOS (3.4.0)
 
 DEPENDENCIES:
   - ImageMagick
+  - Reveal-iOS-SDK
   - TesseractOCRiOS (from `https://github.com/gali8/Tesseract-OCR-iOS.git`)
 
 EXTERNAL SOURCES:
@@ -20,6 +22,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ImageMagick: 69968e0a19a4407abaae92c09a13e9a7fd0d2ba3
+  Reveal-iOS-SDK: b6d94eb78d84ebd2e3182063577975561cd6dbd9
   TesseractOCRiOS: 9b27e85e8eb7e25c63e4ac66db87f6df8eae31e2
 
 COCOAPODS: 0.34.4
