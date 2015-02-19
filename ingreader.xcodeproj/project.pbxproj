@@ -12,6 +12,8 @@
 		24901CDF196825BE00A79DE1 /* probka1x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24901CDE196825BE00A79DE1 /* probka1x.jpg */; };
 		24901CE119682BCA00A79DE1 /* KWFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24901CE019682BCA00A79DE1 /* KWFilters.swift */; };
 		249E7FE81A953B1100BE8C0D /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 249E7FE71A953B1100BE8C0D /* tessdata */; };
+		249E7FEE1A954D9500BE8C0D /* KWIngredientsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249E7FED1A954D9500BE8C0D /* KWIngredientsListViewController.swift */; };
+		249E7FF01A95508200BE8C0D /* KWOcrResultProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249E7FEF1A95508200BE8C0D /* KWOcrResultProcessor.swift */; };
 		24B8918F19694D920092D5CD /* KWBinarizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B8918E19694D920092D5CD /* KWBinarizeFilter.m */; };
 		24C3822019410E2B00674D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3821F19410E2B00674D27 /* AppDelegate.swift */; };
 		24C3822219410E2B00674D27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3822119410E2B00674D27 /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 		249E7FE51A95388600BE8C0D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		249E7FE61A95388D00BE8C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		249E7FE71A953B1100BE8C0D /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		249E7FED1A954D9500BE8C0D /* KWIngredientsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWIngredientsListViewController.swift; sourceTree = "<group>"; };
+		249E7FEF1A95508200BE8C0D /* KWOcrResultProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWOcrResultProcessor.swift; sourceTree = "<group>"; };
 		24B8918D19694D920092D5CD /* KWBinarizeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWBinarizeFilter.h; sourceTree = "<group>"; };
 		24B8918E19694D920092D5CD /* KWBinarizeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWBinarizeFilter.m; sourceTree = "<group>"; };
 		24C3821A19410E2B00674D27 /* ingreader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ingreader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,7 +126,9 @@
 				24714DFA1951B1520091DA29 /* ImagePlayground.playground */,
 				24C3821F19410E2B00674D27 /* AppDelegate.swift */,
 				24C3822119410E2B00674D27 /* ViewController.swift */,
+				249E7FEF1A95508200BE8C0D /* KWOcrResultProcessor.swift */,
 				24C3823C19410FB700674D27 /* KWScannerViewController.swift */,
+				249E7FED1A954D9500BE8C0D /* KWIngredientsListViewController.swift */,
 				24C3822319410E2B00674D27 /* Main.storyboard */,
 				24C3822619410E2B00674D27 /* Images.xcassets */,
 				24C3821D19410E2B00674D27 /* Supporting Files */,
@@ -318,6 +324,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				24B8918F19694D920092D5CD /* KWBinarizeFilter.m in Sources */,
+				249E7FF01A95508200BE8C0D /* KWOcrResultProcessor.swift in Sources */,
+				249E7FEE1A954D9500BE8C0D /* KWIngredientsListViewController.swift in Sources */,
 				24C3823D19410FB700674D27 /* KWScannerViewController.swift in Sources */,
 				24901CE119682BCA00A79DE1 /* KWFilters.swift in Sources */,
 				24C3822219410E2B00674D27 /* ViewController.swift in Sources */,

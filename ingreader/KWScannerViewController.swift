@@ -13,6 +13,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var ocrProgress: UIProgressView!
+    @IBOutlet weak var ocrButton: UIBarButtonItem!
     var selectedImage = UIImage()
     var ocrResult = NSString()
     
@@ -123,6 +124,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     func recognizeImage (image: UIImage) -> Void {
+
         dispatch_async(dispatch_get_main_queue()) {
             self.activityIndicator.startAnimating()
         }
@@ -137,18 +139,23 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         tesseract.charWhitelist = "abcdefghijklmnopqrstuwxyz,()/01234567890" //limit search
         tesseract.image =  image //image to check
         tesseract.recognize()
-        //TODO prevent crash on clicking ocr when no image selected
+
 
         
         ocrResult =  tesseract.recognizedText
         dispatch_async(dispatch_get_main_queue()) {
             self.activityIndicator.stopAnimating()
-            var alert = UIAlertController(title:"Ingreadients found:", message: self.ocrResult,  preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+              self.performSegueWithIdentifier("Present Ingredients List", sender: self)
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Present Ingredients List" {
+            let viewController:KWIngredientsListViewController = segue.destinationViewController as KWIngredientsListViewController
+            viewController.ocrResult = self.ocrResult;
+        }
+    }
+        
     //Image proecessing
     func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
         
@@ -180,10 +187,12 @@ extension KWScannerViewController: UIImagePickerControllerDelegate {
             self.selectedImage = image
             let scaledImage = scaleImage(self.selectedImage, maxDimension: 640)
             self.imageView.image = scaledImage
+            self.ocrButton.enabled = true
             dismissViewControllerAnimated(true, completion: nil)
     }
     
 }
+
 extension KWScannerViewController: G8TesseractDelegate {
     func shouldCancelImageRecognitionForTesseract(tesseract: G8Tesseract) -> Bool {
         var percent = CFloat(tesseract.progress)/100.0
