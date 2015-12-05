@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2454561C194209E2005B6CE3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2454561B194209E2005B6CE3 /* Podfile */; };
+		246F64381C1382A90068A156 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246F64361C1382A90068A156 /* Launch Screen.storyboard */; };
 		24714E031951C7570091DA29 /* probka1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24714E021951C7570091DA29 /* probka1x.png */; };
 		24901CDF196825BE00A79DE1 /* probka1x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24901CDE196825BE00A79DE1 /* probka1x.jpg */; };
 		24901CE119682BCA00A79DE1 /* KWFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24901CE019682BCA00A79DE1 /* KWFilters.swift */; };
@@ -42,6 +43,7 @@
 		0FC44E249820D3FDC427DD03 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1D8B2590217A4BD1848FD317 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2454561B194209E2005B6CE3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		246F64371C1382A90068A156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		24714DFA1951B1520091DA29 /* ImagePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ImagePlayground.playground; sourceTree = "<group>"; };
 		24714E001951B58E0091DA29 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		24714E021951C7570091DA29 /* probka1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = probka1x.png; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				249E7FEF1A95508200BE8C0D /* KWOcrResultProcessor.swift */,
 				24C3823C19410FB700674D27 /* KWScannerViewController.swift */,
 				249E7FED1A954D9500BE8C0D /* KWIngredientsListViewController.swift */,
+				246F64361C1382A90068A156 /* Launch Screen.storyboard */,
 				24C3822319410E2B00674D27 /* Main.storyboard */,
 				24C3822619410E2B00674D27 /* Images.xcassets */,
 				24C3821D19410E2B00674D27 /* Supporting Files */,
@@ -276,6 +279,7 @@
 				24C3822719410E2B00674D27 /* Images.xcassets in Resources */,
 				24901CDF196825BE00A79DE1 /* probka1x.jpg in Resources */,
 				249E7FE81A953B1100BE8C0D /* tessdata in Resources */,
+				246F64381C1382A90068A156 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +374,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		246F64361C1382A90068A156 /* Launch Screen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				246F64371C1382A90068A156 /* Base */,
+			);
+			name = "Launch Screen.storyboard";
+			sourceTree = "<group>";
+		};
 		24C3822319410E2B00674D27 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
