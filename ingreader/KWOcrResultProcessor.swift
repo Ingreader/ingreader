@@ -20,7 +20,7 @@ class KWOcrResultProcessor {
     }
 
     func removeNewLines(){
-        self.ocrResult = self.ocrResult.stringByReplacingOccurrencesOfString("\n", withString: "", options: nil, range: NSMakeRange(0, self.ocrResult.length))
+        self.ocrResult = self.ocrResult.stringByReplacingOccurrencesOfString("\n", withString: "", options: [], range: NSMakeRange(0, self.ocrResult.length))
     }
     
     func splitResult() {
@@ -31,8 +31,8 @@ class KWOcrResultProcessor {
         let notEmptyPredicate = NSPredicate(format:"length > 0")
         let notIngredientsPredicate = NSPredicate(format:"!(SELF CONTAINS[cd] %@)", "ingredients")
         
-        ingredients =  (ingredients as NSArray).filteredArrayUsingPredicate(notEmptyPredicate!)
-        ingredients =  (ingredients as NSArray).filteredArrayUsingPredicate(notIngredientsPredicate!)
+        ingredients =  (ingredients as NSArray).filteredArrayUsingPredicate(notEmptyPredicate)
+        ingredients =  (ingredients as NSArray).filteredArrayUsingPredicate(notIngredientsPredicate)
 
     }
 }

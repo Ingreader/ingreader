@@ -23,7 +23,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         self.ocrProgress.hidden = true
     }
     
-    @IBAction func takePicture(AnyObject) {
+    @IBAction func takePicture(_: AnyObject) {
 
         let imagePickerActionSheet = UIAlertController(title: "Take photo or select exsiting?",
             message: nil, preferredStyle: .ActionSheet)
@@ -61,7 +61,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
             completion: nil)
     }
 
-    @IBAction func owsiar(AnyObject) {
+    @IBAction func owsiar(_: AnyObject) {
         dispatch_async(dispatch_get_main_queue()) {
             self.activityIndicator.startAnimating()
             self.ocrProgress.hidden = false
@@ -76,7 +76,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         }
     }
     
-    @IBAction func sharpening(AnyObject) {
+    @IBAction func sharpening(_: AnyObject) {
         dispatch_async(dispatch_get_main_queue()) {
             self.activityIndicator.startAnimating()
         }
@@ -91,7 +91,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         }
     }
     
-    @IBAction func monochrome(AnyObject) {
+    @IBAction func monochrome(_: AnyObject) {
         dispatch_async(dispatch_get_main_queue()) {
             self.activityIndicator.startAnimating()
         }
@@ -107,7 +107,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         }
     }
     
-    @IBAction func binarize(AnyObject) {
+    @IBAction func binarize(_: AnyObject) {
         
         dispatch_async(dispatch_get_main_queue()) {
             self.activityIndicator.startAnimating()
@@ -151,7 +151,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Present Ingredients List" {
-            let viewController:KWIngredientsListViewController = segue.destinationViewController as KWIngredientsListViewController
+            let viewController:KWIngredientsListViewController = segue.destinationViewController as! KWIngredientsListViewController
             viewController.ocrResult = self.ocrResult;
         }
     }
@@ -182,7 +182,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
 
 }
 
-extension KWScannerViewController: UIImagePickerControllerDelegate {
+extension KWScannerViewController {
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
             self.selectedImage = image
             let scaledImage = scaleImage(self.selectedImage, maxDimension: 640)
@@ -193,11 +193,11 @@ extension KWScannerViewController: UIImagePickerControllerDelegate {
     
 }
 
-extension KWScannerViewController: G8TesseractDelegate {
+extension KWScannerViewController{
     func shouldCancelImageRecognitionForTesseract(tesseract: G8Tesseract) -> Bool {
-        var percent = CFloat(tesseract.progress)/100.0
-        var progressPercentString = NSString(format:"%.03f", (CFloat(tesseract.progress)/100.0))
-        var progressPercent = CFloat(progressPercentString.doubleValue)
+        let percent = CFloat(tesseract.progress)/100.0
+        //let progressPercentString = NSString(format:"%.03f", (CFloat(tesseract.progress)/100.0))
+        //        _ = CFloat(progressPercentString.doubleValue)
         dispatch_async(dispatch_get_main_queue()) {
             self.ocrProgress.setProgress(percent, animated: true)
         }

@@ -14,7 +14,7 @@ class KWIngredientsListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var processor:KWOcrResultProcessor = KWOcrResultProcessor(ocrInput: ocrResult)
+        let processor:KWOcrResultProcessor = KWOcrResultProcessor(ocrInput: ocrResult)
         ingredients = processor.ingredients
     }
 
@@ -25,15 +25,15 @@ class KWIngredientsListViewController: UITableViewController {
 
 }
 
-extension KWIngredientsListViewController: UITableViewDataSource{
+extension KWIngredientsListViewController {
 
     
     override func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cellId: NSString = "IngredientCell"
-            var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellId) as UITableViewCell
-            if var ingredient = self.ingredients[indexPath.row] as? NSString {
-                cell.textLabel?.text = ingredient
+            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellId as String)! as UITableViewCell
+            if let ingredient = self.ingredients[indexPath.row] as? NSString {
+                cell.textLabel?.text = ingredient as String
             }
             
             return cell
