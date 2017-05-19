@@ -6,10 +6,11 @@ import CoreImage
 var str = "Hello, playground"
 
 
-println( CIFilter.filterNamesInCategory(kCICategoryBuiltIn))
+//print( CIFilter.filterNamesInCategory(kCICategoryBuiltIn))
+print( CIFilter.filterNames(inCategory:kCICategoryBuiltIn))
 
-var sample = UIImage(named: "/Users/kamelury/workspace/ios/ingreader/ingreader/probka1x")
 
+var sample = UIImage(named: "probka1x.jpg")
 
 var context: CIContext = CIContext(options:nil);
 
@@ -21,8 +22,8 @@ var context: CIContext = CIContext(options:nil);
 //var image = UIImage(data: data)
 //var coreImage = CIImage(image: image)
 //
-var ciiiii = sample.CGImage
-var nic = CIImage.emptyImage()
+var ciiiii = sample?.cgImage
+var nic = CIImage.empty()
 
 //
 //var fileNameAndPath = NSURL.fileURLWithPath("/Users/kamelury/workspace/ios/ingreader/ingreader/probka1x.png")
@@ -58,21 +59,21 @@ var nic = CIImage.emptyImage()
 func imageByDrawing(size: CGSize, scale:CGFloat, closure: () -> ()) -> UIImage {
     UIGraphicsBeginImageContextWithOptions(size,false,scale)
     closure()
-    var result = UIGraphicsGetImageFromCurrentImageContext()
+    let result = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()
-    return result
+    return result!
 }
 
 func prepareImage(source: UIImage, saturation: CGFloat = 1) -> UIImage {
-    var size = source.size
-    var bounds = CGRect(x:0, y:0, width: size.width, height: size.height)
-    return imageByDrawing(size, source.scale) {
-        source.drawAtPoint(CGPoint())
+    let size = source.size
+//    var bounds = CGRect(x:0, y:0, width: size.width, height: size.height)
+    return imageByDrawing(size:size, scale:source.scale) {
+        source.draw(at:CGPoint())
     }
 }
 
-prepareImage(sample)
-prepareImage(sample, saturation: 1.0/3.0)
+prepareImage(source:sample!)
+prepareImage(source:sample!, saturation: 1.0/3.0)
 
 
 //func sharpenImage (source: UIImage) -> UIImage?{
