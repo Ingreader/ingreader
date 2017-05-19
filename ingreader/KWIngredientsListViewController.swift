@@ -10,7 +10,7 @@ import UIKit
 
 class KWIngredientsListViewController: UITableViewController {
     var ocrResult = NSString()
-    var ingredients = [String]()
+    var ingredients = [String?]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ extension KWIngredientsListViewController {
         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cellId: NSString = "IngredientCell"
             let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId as String)! as UITableViewCell
-            if let ingredient = self.ingredients[indexPath.row] as? String {
+            if let ingredient = self.ingredients[indexPath.row] as String? {
                 cell.textLabel?.text = ingredient as String
             }
             

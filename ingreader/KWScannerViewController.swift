@@ -66,7 +66,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
             self.activityIndicator.startAnimating()
             self.ocrProgress.isHidden = false
         }
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             self.recognizeImage(self.selectedImage)
             
             DispatchQueue.main.async {
@@ -80,7 +80,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         DispatchQueue.main.async {
             self.activityIndicator.startAnimating()
         }
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             let result = KWFilters.sharpenImage(self.imageView.image!)
             
             DispatchQueue.main.async {
@@ -95,7 +95,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         DispatchQueue.main.async {
             self.activityIndicator.startAnimating()
         }
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             if (self.imageView.image != nil) {
                 let result = KWFilters.binarizeImage(self.imageView.image!)
                 DispatchQueue.main.async {
@@ -112,7 +112,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         DispatchQueue.main.async {
             self.activityIndicator.startAnimating()
         }
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             let result = KWFilters.customBinarizeImage(self.imageView.image!)
             
             DispatchQueue.main.async {
@@ -135,6 +135,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         tesseract?.pageSegmentationMode = .auto
         tesseract?.maximumRecognitionTime = 60.0
         tesseract?.image = image.g8_blackAndWhite()
+        
 
         tesseract?.charWhitelist = "abcdefghijklmnopqrstuwxyz,()/01234567890" //limit search
         tesseract?.image =  image //image to check
@@ -142,7 +143,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
 
 
         
-        ocrResult =  tesseract!.recognizedText as! NSString
+        ocrResult =  tesseract!.recognizedText as NSString
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
               self.performSegue(withIdentifier: "Present Ingredients List", sender: self)

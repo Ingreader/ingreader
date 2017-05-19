@@ -41,8 +41,9 @@
 
 -(CIImage *)outputImage {
     CGRect dod = self.inputImage.extent;
+    CIKernelROICallback callback;
     CIImage * image = [[self myKernel] applyWithExtent: dod
-                                roiCallback: Nil
+                                roiCallback: callback
                                   arguments: @[self.inputImage, @0.3f] ];
     return image;
 }
