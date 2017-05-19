@@ -10,7 +10,7 @@ import UIKit
 
 class KWFilters: CIFilter {
     
-    class func sharpenImage(image: UIImage) -> (UIImage)  {
+    class func sharpenImage(_ image: UIImage) -> (UIImage)  {
         let context = UIGraphicsGetCurrentContext()
         let ciContext = CIContext(options: nil)
         let coreImage = CIImage(image: image)
@@ -22,16 +22,16 @@ class KWFilters: CIFilter {
         filter!.setValue(coreImage, forKey: kCIInputImageKey)
         
         // we retrieve the processed image
-        let filteredImageData = filter!.valueForKey(kCIOutputImageKey) as! CIImage
+        let filteredImageData = filter!.value(forKey: kCIOutputImageKey) as! CIImage
         // returns a Quartz image from the Core Image context
-        let filteredImageRef = ciContext.createCGImage(filteredImageData, fromRect: filteredImageData.extent)
+        let filteredImageRef = ciContext.createCGImage(filteredImageData, from: filteredImageData.extent)
         // this is our final UIImage ready to be displayed
-        let filteredImage = UIImage(CGImage: filteredImageRef);
+        let filteredImage = UIImage(cgImage: filteredImageRef!);
         return filteredImage;
 
     }
     
-    class func binarizeImage(image: UIImage) -> (UIImage)  {
+    class func binarizeImage(_ image: UIImage) -> (UIImage)  {
         let context = UIGraphicsGetCurrentContext()
         let ciContext = CIContext(options: nil)
         let coreImage = CIImage(image: image)
@@ -44,14 +44,14 @@ class KWFilters: CIFilter {
         
         filter!.setValue(coreImage, forKey: kCIInputImageKey)
         
-        let filteredImageData = filter!.valueForKey(kCIOutputImageKey) as! CIImage
-        let filteredImageRef = ciContext.createCGImage(filteredImageData, fromRect: filteredImageData.extent)
-        let filteredImage = UIImage(CGImage: filteredImageRef);
+        let filteredImageData = filter!.value(forKey: kCIOutputImageKey) as! CIImage
+        let filteredImageRef = ciContext.createCGImage(filteredImageData, from: filteredImageData.extent)
+        let filteredImage = UIImage(cgImage: filteredImageRef!);
         return filteredImage;
         
     }
     
-    class func customBinarizeImage(image: UIImage) -> (UIImage)  {
+    class func customBinarizeImage(_ image: UIImage) -> (UIImage)  {
         _ = UIGraphicsGetCurrentContext()
         let ciContext = CIContext(options: nil)
         let coreImage = CIImage(image: image)
@@ -60,8 +60,8 @@ class KWFilters: CIFilter {
         filter.inputImage = coreImage
 
         if let filteredImageData = filter.outputImage {
-            let filteredImageRef = ciContext.createCGImage(filteredImageData, fromRect: filteredImageData.extent)
-            let filteredImage = UIImage(CGImage: filteredImageRef);
+            let filteredImageRef = ciContext.createCGImage(filteredImageData, from: filteredImageData.extent)
+            let filteredImage = UIImage(cgImage: filteredImageRef!);
             return filteredImage;
         }
         return UIImage()

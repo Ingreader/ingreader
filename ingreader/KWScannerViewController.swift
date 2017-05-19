@@ -17,24 +17,24 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     var selectedImage = UIImage()
     var ocrResult = NSString()
     
-    override func viewWillAppear(animated: Bool) {
-        self.imageView.contentMode =  .ScaleAspectFit
+    override func viewWillAppear(_ animated: Bool) {
+        self.imageView.contentMode =  .scaleAspectFit
         self.ocrProgress.progress = 0.0
-        self.ocrProgress.hidden = true
+        self.ocrProgress.isHidden = true
     }
     
     @IBAction func takePicture(_: AnyObject) {
 
         let imagePickerActionSheet = UIAlertController(title: "Take photo or select exsiting?",
-            message: nil, preferredStyle: .ActionSheet)
+            message: nil, preferredStyle: .actionSheet)
         
-        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let cameraButton = UIAlertAction(title: "Take Photo",
-                style: .Default) { (alert) -> Void in
+                style: .default) { (alert) -> Void in
                     let imagePicker = UIImagePickerController()
                     imagePicker.delegate = self
-                    imagePicker.sourceType = .Camera
-                    self.presentViewController(imagePicker,
+                    imagePicker.sourceType = .camera
+                    self.present(imagePicker,
                         animated: true,
                         completion: nil)
             }
@@ -42,48 +42,48 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         }
         
         let libraryButton = UIAlertAction(title: "Choose Existing",
-            style: .Default) { (alert) -> Void in
+            style: .default) { (alert) -> Void in
                 let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
-                imagePicker.sourceType = .PhotoLibrary
-                self.presentViewController(imagePicker,
+                imagePicker.sourceType = .photoLibrary
+                self.present(imagePicker,
                     animated: true,
                     completion: nil)
         }
         imagePickerActionSheet.addAction(libraryButton)
         
         let cancelButton = UIAlertAction(title: "Cancel",
-            style: .Cancel) { (alert) -> Void in
+            style: .cancel) { (alert) -> Void in
         }
         imagePickerActionSheet.addAction(cancelButton)
         
-        presentViewController(imagePickerActionSheet, animated: true,
+        present(imagePickerActionSheet, animated: true,
             completion: nil)
     }
 
     @IBAction func owsiar(_: AnyObject) {
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             self.activityIndicator.startAnimating()
-            self.ocrProgress.hidden = false
+            self.ocrProgress.isHidden = false
         }
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
             self.recognizeImage(self.selectedImage)
             
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
-                self.ocrProgress.hidden = true
+                self.ocrProgress.isHidden = true
             }
         }
     }
     
     @IBAction func sharpening(_: AnyObject) {
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             self.activityIndicator.startAnimating()
         }
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
             let result = KWFilters.sharpenImage(self.imageView.image!)
             
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
                 self.selectedImage = result
                 self.imageView.image = result
@@ -92,13 +92,13 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     @IBAction func monochrome(_: AnyObject) {
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             self.activityIndicator.startAnimating()
         }
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
             if (self.imageView.image != nil) {
                 let result = KWFilters.binarizeImage(self.imageView.image!)
-                dispatch_async(dispatch_get_main_queue()) {
+                DispatchQueue.main.async {
                     self.activityIndicator.stopAnimating()
                     self.selectedImage = result
                     self.imageView.image = result
@@ -109,13 +109,13 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
     
     @IBAction func binarize(_: AnyObject) {
         
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             self.activityIndicator.startAnimating()
         }
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
             let result = KWFilters.customBinarizeImage(self.imageView.image!)
             
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
                 self.selectedImage = result
                 self.imageView.image = result
@@ -123,41 +123,41 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         }
     }
     
-    func recognizeImage (image: UIImage) -> Void {
+    func recognizeImage (_ image: UIImage) -> Void {
 
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             self.activityIndicator.startAnimating()
         }
 
         let tesseract = G8Tesseract(language:"eng")
-        tesseract.delegate = self
-        tesseract.engineMode = .TesseractCubeCombined
-        tesseract.pageSegmentationMode = .Auto
-        tesseract.maximumRecognitionTime = 60.0
-        tesseract.image = image.g8_blackAndWhite()
+        tesseract?.delegate = self
+        tesseract?.engineMode = .tesseractCubeCombined
+        tesseract?.pageSegmentationMode = .auto
+        tesseract?.maximumRecognitionTime = 60.0
+        tesseract?.image = image.g8_blackAndWhite()
 
-        tesseract.charWhitelist = "abcdefghijklmnopqrstuwxyz,()/01234567890" //limit search
-        tesseract.image =  image //image to check
-        tesseract.recognize()
+        tesseract?.charWhitelist = "abcdefghijklmnopqrstuwxyz,()/01234567890" //limit search
+        tesseract?.image =  image //image to check
+        tesseract?.recognize()
 
 
         
-        ocrResult =  tesseract.recognizedText
-        dispatch_async(dispatch_get_main_queue()) {
+        ocrResult =  tesseract!.recognizedText as! NSString
+        DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
-              self.performSegueWithIdentifier("Present Ingredients List", sender: self)
+              self.performSegue(withIdentifier: "Present Ingredients List", sender: self)
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Present Ingredients List" {
-            let viewController:KWIngredientsListViewController = segue.destinationViewController as! KWIngredientsListViewController
+            let viewController:KWIngredientsListViewController = segue.destination as! KWIngredientsListViewController
             viewController.ocrResult = self.ocrResult;
         }
     }
         
     //Image proecessing
-    func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
+    func scaleImage(_ image: UIImage, maxDimension: CGFloat) -> UIImage {
         
         var scaledSize = CGSize(width: maxDimension, height: maxDimension)
         var scaleFactor: CGFloat
@@ -173,32 +173,32 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         }
         
         UIGraphicsBeginImageContext(scaledSize)
-        image.drawInRect(CGRectMake(0, 0, scaledSize.width, scaledSize.height))
+        image.draw(in: CGRect(x: 0, y: 0, width: scaledSize.width, height: scaledSize.height))
         let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return scaledImage
+        return scaledImage!
     }
 
 }
 
 extension KWScannerViewController {
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+    func imagePickerController(_ picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [AnyHashable: Any]!) {
             self.selectedImage = image
             let scaledImage = scaleImage(self.selectedImage, maxDimension: 640)
             self.imageView.image = scaledImage
-            self.ocrButton.enabled = true
-            dismissViewControllerAnimated(true, completion: nil)
+            self.ocrButton.isEnabled = true
+            dismiss(animated: true, completion: nil)
     }
     
 }
 
 extension KWScannerViewController{
-    func shouldCancelImageRecognitionForTesseract(tesseract: G8Tesseract) -> Bool {
+    func shouldCancelImageRecognition(for tesseract: G8Tesseract) -> Bool {
         let percent = CFloat(tesseract.progress)/100.0
         //let progressPercentString = NSString(format:"%.03f", (CFloat(tesseract.progress)/100.0))
         //        _ = CFloat(progressPercentString.doubleValue)
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             self.ocrProgress.setProgress(percent, animated: true)
         }
         return false;  // return YES, if you need to interrupt tesseract before it finishes

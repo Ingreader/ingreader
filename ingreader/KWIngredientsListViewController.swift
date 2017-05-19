@@ -10,7 +10,7 @@ import UIKit
 
 class KWIngredientsListViewController: UITableViewController {
     var ocrResult = NSString()
-    var ingredients = NSArray()
+    var ingredients = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,18 +28,18 @@ class KWIngredientsListViewController: UITableViewController {
 extension KWIngredientsListViewController {
 
     
-    override func tableView(tableView: UITableView,
-        cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cellId: NSString = "IngredientCell"
-            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellId as String)! as UITableViewCell
-            if let ingredient = self.ingredients[indexPath.row] as? NSString {
+            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId as String)! as UITableViewCell
+            if let ingredient = self.ingredients[indexPath.row] as? String {
                 cell.textLabel?.text = ingredient as String
             }
             
             return cell
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.ingredients.count
     }
 }
