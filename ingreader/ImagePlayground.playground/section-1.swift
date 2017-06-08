@@ -74,7 +74,7 @@ func prepareImage(source: UIImage, saturation: CGFloat = 1) -> UIImage {
 
 prepareImage(source:sample!)
 prepareImage(source:sample!, saturation: 1.0/3.0)
-
+prepareImage(source:sample!, saturation: 0)
 
 //func sharpenImage (source: UIImage) -> UIImage?{
 //
