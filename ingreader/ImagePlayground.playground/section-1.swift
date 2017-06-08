@@ -76,6 +76,48 @@ prepareImage(source:sample!)
 prepareImage(source:sample!, saturation: 1.0/3.0)
 
 
+//extension UIImage {
+//}
+    func imageDesaturated (image: UIImage)  -> Void {
+        //    CIContext context = [CIContext contextWithOptions:nil];
+        let context = CIContext.init(options: nil);
+        //CIImage ciimage = [CIImage imageWithCGImage:self.CGImage];
+        let ciimage = CIImage.init(cgImage: UIImage.cgImage!);
+        
+        //        CIFilter filter = [CIFilter filterWithName:@"CIColorControls"];
+        let filter = CIFilter(name: "CIColorControls");
+        
+        
+        //[filter setValue:ciimage forKey:kCIInputImageKey];
+        filter?.setValue(ciimage, forKey: kCIInputImageKey);
+        
+        //[filter setValue:@0.0f forKey:kCIInputSaturationKey];
+        filter?.setValue(0, forKey: kCIInputSaturationKey);
+        
+        
+        //CIImage *result = [filter valueForKey:kCIOutputImageKey];
+        if let result = filter?.value(forKey: kCIOutputImageKey) {
+            //CGImageRef cgImage = [context createCGImage:result fromRect:[result extent]];
+            let cg_result: CGImage = result as! CGImage;
+            let cgImage = context.createCGImage(cg_result, from: result.extent() );
+            
+            
+            //UIImage *image = [UIImage imageWithCGImage:cgImage];
+            let image = UIImage.init(cgImage: cgImage);
+            
+            
+        }
+        
+        
+        
+        CGImageRelease(cgImage);
+        return image;
+    }
+    
+imageDesaturated(image:sample);
+
+
+
 //func sharpenImage (source: UIImage) -> UIImage?{
 //
 //
