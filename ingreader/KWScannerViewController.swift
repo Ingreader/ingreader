@@ -122,6 +122,8 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
             }
         }
     }
+
+    
     
     func recognizeImage (_ image: UIImage) -> Void {
 
@@ -135,6 +137,18 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         tesseract?.pageSegmentationMode = .auto
         tesseract?.maximumRecognitionTime = 60.0
         tesseract?.image = image.g8_blackAndWhite()
+        image.satura
+        
+        
+        
+/**
+//        A convenience method for using CoreImage filters to preprocess an image by
+//        1) setting the saturation to 0 to achieve grayscale,
+//        2) increasing the contrast by 10% to make black parts blacker, and
+//        3) reducing the exposure by 30% to reduce the amount of "light" in the image.
+**/
+        
+        
         
 
         tesseract?.charWhitelist = "abcdefghijklmnopqrstuwxyz,()/01234567890" //limit search
