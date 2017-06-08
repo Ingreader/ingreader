@@ -11,7 +11,7 @@ import UIKit
 class KWFilters: CIFilter {
     
     class func sharpenImage(_ image: UIImage) -> (UIImage)  {
-        let context = UIGraphicsGetCurrentContext()
+        _ = UIGraphicsGetCurrentContext()
         let ciContext = CIContext(options: nil)
         let coreImage = CIImage(image: image)
         
@@ -32,7 +32,7 @@ class KWFilters: CIFilter {
     }
     
     class func binarizeImage(_ image: UIImage) -> (UIImage)  {
-        let context = UIGraphicsGetCurrentContext()
+        _ = UIGraphicsGetCurrentContext()
         let ciContext = CIContext(options: nil)
         let coreImage = CIImage(image: image)
         
