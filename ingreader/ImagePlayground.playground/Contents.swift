@@ -3,14 +3,14 @@
 import UIKit
 import CoreImage
 
+
 var str = "Hello, playground"
 
-
-//print( CIFilter.filterNamesInCategory(kCICategoryBuiltIn))
-print( CIFilter.filterNames(inCategory:kCICategoryBuiltIn))
+//print( CIFilter.filterNames(inCategory:kCICategoryBuiltIn))
 
 
 var sample = UIImage(named: "probka1x.jpg")
+var color_sample = UIImage(named: "probka2.jpeg")
 
 var context: CIContext = CIContext(options:nil);
 
@@ -22,8 +22,8 @@ var context: CIContext = CIContext(options:nil);
 //var image = UIImage(data: data)
 //var coreImage = CIImage(image: image)
 //
-var ciiiii = sample?.cgImage
-var nic = CIImage.empty()
+//var ciiiii = sample?.cgImage
+//var nic = CIImage.empty()
 
 //
 //var fileNameAndPath = NSURL.fileURLWithPath("/Users/kamelury/workspace/ios/ingreader/ingreader/probka1x.png")
@@ -55,6 +55,7 @@ var nic = CIImage.empty()
 //self.imageView.image = newImage;
 //CGImageRelease(cgimg);
 
+color_sample
 
 func imageByDrawing(size: CGSize, scale:CGFloat, closure: () -> ()) -> UIImage {
     UIGraphicsBeginImageContextWithOptions(size,false,scale)
@@ -64,7 +65,7 @@ func imageByDrawing(size: CGSize, scale:CGFloat, closure: () -> ()) -> UIImage {
     return result!
 }
 
-func prepareImage(source: UIImage, saturation: CGFloat = 1) -> UIImage {
+func prepareImage(source: UIImage, saturation: CGFloat) -> UIImage {
     let size = source.size
 //    var bounds = CGRect(x:0, y:0, width: size.width, height: size.height)
     return imageByDrawing(size:size, scale:source.scale) {
@@ -72,50 +73,28 @@ func prepareImage(source: UIImage, saturation: CGFloat = 1) -> UIImage {
     }
 }
 
-prepareImage(source:sample!)
-prepareImage(source:sample!, saturation: 1.0/3.0)
-prepareImage(source:sample!, saturation: 0)
+//prepareImage(source:color_sample!, saturation: 1)
+//prepareImage(source:color_sample!, saturation: 1.0/3.0)
+//prepareImage(source:color_sample!, saturation: 0)
 
-//extension UIImage {
-//}
-    func imageDesaturated (image: UIImage)  -> Void {
-        //    CIContext context = [CIContext contextWithOptions:nil];
-        let context = CIContext.init(options: nil);
-        //CIImage ciimage = [CIImage imageWithCGImage:self.CGImage];
-        let ciimage = CIImage.init(cgImage: UIImage.cgImage!);
-        
-        //        CIFilter filter = [CIFilter filterWithName:@"CIColorControls"];
-        let filter = CIFilter(name: "CIColorControls");
-        
-        
-        //[filter setValue:ciimage forKey:kCIInputImageKey];
-        filter?.setValue(ciimage, forKey: kCIInputImageKey);
-        
-        //[filter setValue:@0.0f forKey:kCIInputSaturationKey];
-        filter?.setValue(0, forKey: kCIInputSaturationKey);
-        
-        
-        //CIImage *result = [filter valueForKey:kCIOutputImageKey];
-        if let result = filter?.value(forKey: kCIOutputImageKey) {
-            //CGImageRef cgImage = [context createCGImage:result fromRect:[result extent]];
-            let cg_result: CGImage = result as! CGImage;
-            let cgImage = context.createCGImage(cg_result, from: result.extent() );
-            
-            
-            //UIImage *image = [UIImage imageWithCGImage:cgImage];
-            let image = UIImage.init(cgImage: cgImage);
-            
-            
-        }
-        
-        
-        
-        CGImageRelease(cgImage);
-        return image;
-    }
-    
-imageDesaturated(image:sample);
 
+
+/**
+ //        A convenience method for using CoreImage filters to preprocess an image by
+ //        1) setting the saturation to 0 to achieve grayscale,
+ //        2) increasing the contrast by 10% to make black parts blacker, and
+ //        3) reducing the exposure by 30% to reduce the amount of "light" in the image.
+ **/
+
+
+
+
+
+//let desaturated = color_sample?.imageDesaturated();
+//let contrasted = desaturated?.contrast(percent: 10);
+//let exposured = contrasted?.exposure(percent: -30);
+
+color_sample?.imageDesaturated()?.contrast(percent: 10)?.exposure(percent: -30);
 
 
 //func sharpenImage (source: UIImage) -> UIImage?{

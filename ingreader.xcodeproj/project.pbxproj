@@ -26,6 +26,7 @@
 		24DB1752194F7D8800EB5165 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DB1751194F7D8800EB5165 /* CoreGraphics.framework */; };
 		24DB1754194F7D9100EB5165 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DB1753194F7D9100EB5165 /* UIKit.framework */; };
 		24DB1756194F7D9800EB5165 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DB1755194F7D9800EB5165 /* Foundation.framework */; };
+		62F82BCF1EE9763400DC53E2 /* UIImage+Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F82BCE1EE9763400DC53E2 /* UIImage+Filters.swift */; };
 		74AD866491209DE817DD240A /* libPods-ingreader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5DB44CAF6120ED930EB2A7 /* libPods-ingreader.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		24DB1753194F7D9100EB5165 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24DB1755194F7D9800EB5165 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5334CE461CF4F48215917CC0 /* Pods-ingreader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ingreader.release.xcconfig"; path = "Pods/Target Support Files/Pods-ingreader/Pods-ingreader.release.xcconfig"; sourceTree = "<group>"; };
+		62F82BCE1EE9763400DC53E2 /* UIImage+Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Filters.swift"; path = "Extensions/UIImage+Filters.swift"; sourceTree = "<group>"; };
 		66D96626C5E583381A2C558F /* Pods-ingreader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ingreader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ingreader/Pods-ingreader.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 		24C3821119410E2B00674D27 = {
 			isa = PBXGroup;
 			children = (
+				62F82BCD1EE9760900DC53E2 /* Extensions */,
 				24C3821C19410E2B00674D27 /* ingreader */,
 				24C3822F19410E2B00674D27 /* ingreaderTests */,
 				24C3821B19410E2B00674D27 /* Products */,
@@ -177,6 +180,14 @@
 				1C5DB44CAF6120ED930EB2A7 /* libPods-ingreader.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62F82BCD1EE9760900DC53E2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				62F82BCE1EE9763400DC53E2 /* UIImage+Filters.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		DE759D2AF9A7589D57A6C4CE /* Pods */ = {
@@ -353,6 +364,7 @@
 				249E7FEE1A954D9500BE8C0D /* KWIngredientsListViewController.swift in Sources */,
 				24C3823D19410FB700674D27 /* KWScannerViewController.swift in Sources */,
 				24901CE119682BCA00A79DE1 /* KWFilters.swift in Sources */,
+				62F82BCF1EE9763400DC53E2 /* UIImage+Filters.swift in Sources */,
 				24C3822219410E2B00674D27 /* ViewController.swift in Sources */,
 				24C3822019410E2B00674D27 /* AppDelegate.swift in Sources */,
 			);
