@@ -94,7 +94,7 @@ func prepareImage(source: UIImage, saturation: CGFloat) -> UIImage {
 //let contrasted = desaturated?.contrast(percent: 10);
 //let exposured = contrasted?.exposure(percent: -30);
 
-color_sample?.imageDesaturated()?.contrast(percent: 10)?.exposure(percent: -30);
+//color_sample?.imageDesaturated()?.contrast(percent: 10)?.exposure(percent: -30);
 
 
 //func sharpenImage (source: UIImage) -> UIImage?{
