@@ -136,7 +136,7 @@ class KWScannerViewController: UIViewController, UIImagePickerControllerDelegate
         tesseract?.engineMode = .tesseractCubeCombined
         tesseract?.pageSegmentationMode = .auto
         tesseract?.maximumRecognitionTime = 60.0
-        tesseract?.image = image.g8_blackAndWhite()
+        tesseract?.image = image.blackwhite()
         tesseract?.charWhitelist = "abcdefghijklmnopqrstuwxyz,()/01234567890" //limit search
         tesseract?.image =  image //image to check
         tesseract?.recognize()

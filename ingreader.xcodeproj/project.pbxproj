@@ -9,15 +9,12 @@
 /* Begin PBXBuildFile section */
 		2454561C194209E2005B6CE3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2454561B194209E2005B6CE3 /* Podfile */; };
 		246F64381C1382A90068A156 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246F64361C1382A90068A156 /* Launch Screen.storyboard */; };
-		24714E031951C7570091DA29 /* probka1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24714E021951C7570091DA29 /* probka1x.png */; };
-		24901CDF196825BE00A79DE1 /* probka1x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24901CDE196825BE00A79DE1 /* probka1x.jpg */; };
 		24901CE119682BCA00A79DE1 /* KWFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24901CE019682BCA00A79DE1 /* KWFilters.swift */; };
 		249E7FE81A953B1100BE8C0D /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 249E7FE71A953B1100BE8C0D /* tessdata */; };
 		249E7FEE1A954D9500BE8C0D /* KWIngredientsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249E7FED1A954D9500BE8C0D /* KWIngredientsListViewController.swift */; };
 		249E7FF01A95508200BE8C0D /* KWOcrResultProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249E7FEF1A95508200BE8C0D /* KWOcrResultProcessor.swift */; };
 		24B8918F19694D920092D5CD /* KWBinarizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B8918E19694D920092D5CD /* KWBinarizeFilter.m */; };
 		24C3822019410E2B00674D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3821F19410E2B00674D27 /* AppDelegate.swift */; };
-		24C3822219410E2B00674D27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3822119410E2B00674D27 /* ViewController.swift */; };
 		24C3822519410E2B00674D27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C3822319410E2B00674D27 /* Main.storyboard */; };
 		24C3822719410E2B00674D27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C3822619410E2B00674D27 /* Images.xcassets */; };
 		24C3823319410E2B00674D27 /* ingreaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C3823219410E2B00674D27 /* ingreaderTests.swift */; };
@@ -46,8 +43,6 @@
 		246F64371C1382A90068A156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		24714DFA1951B1520091DA29 /* ImagePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ImagePlayground.playground; sourceTree = "<group>"; };
 		24714E001951B58E0091DA29 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		24714E021951C7570091DA29 /* probka1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = probka1x.png; sourceTree = "<group>"; };
-		24901CDE196825BE00A79DE1 /* probka1x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = probka1x.jpg; sourceTree = "<group>"; };
 		24901CE019682BCA00A79DE1 /* KWFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWFilters.swift; sourceTree = "<group>"; };
 		249E7FE51A95388600BE8C0D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		249E7FE61A95388D00BE8C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,7 +54,6 @@
 		24C3821A19410E2B00674D27 /* ingreader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ingreader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C3821E19410E2B00674D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C3821F19410E2B00674D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24C3822119410E2B00674D27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		24C3822619410E2B00674D27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		24C3822C19410E2B00674D27 /* ingreaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ingreaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C3823119410E2B00674D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,11 +120,8 @@
 				249E7FE71A953B1100BE8C0D /* tessdata */,
 				24B8918D19694D920092D5CD /* KWBinarizeFilter.h */,
 				24B8918E19694D920092D5CD /* KWBinarizeFilter.m */,
-				24901CDE196825BE00A79DE1 /* probka1x.jpg */,
-				24714E021951C7570091DA29 /* probka1x.png */,
 				24714DFA1951B1520091DA29 /* ImagePlayground.playground */,
 				24C3821F19410E2B00674D27 /* AppDelegate.swift */,
-				24C3822119410E2B00674D27 /* ViewController.swift */,
 				249E7FEF1A95508200BE8C0D /* KWOcrResultProcessor.swift */,
 				24C3823C19410FB700674D27 /* KWScannerViewController.swift */,
 				249E7FED1A954D9500BE8C0D /* KWIngredientsListViewController.swift */,
@@ -288,10 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2454561C194209E2005B6CE3 /* Podfile in Resources */,
-				24714E031951C7570091DA29 /* probka1x.png in Resources */,
 				24C3822519410E2B00674D27 /* Main.storyboard in Resources */,
 				24C3822719410E2B00674D27 /* Images.xcassets in Resources */,
-				24901CDF196825BE00A79DE1 /* probka1x.jpg in Resources */,
 				249E7FE81A953B1100BE8C0D /* tessdata in Resources */,
 				246F64381C1382A90068A156 /* Launch Screen.storyboard in Resources */,
 			);
@@ -365,7 +354,6 @@
 				24C3823D19410FB700674D27 /* KWScannerViewController.swift in Sources */,
 				24901CE119682BCA00A79DE1 /* KWFilters.swift in Sources */,
 				62F82BCF1EE9763400DC53E2 /* UIImage+Filters.swift in Sources */,
-				24C3822219410E2B00674D27 /* ViewController.swift in Sources */,
 				24C3822019410E2B00674D27 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,11 +499,7 @@
 				INFOPLIST_FILE = ingreader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "lk.si.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = ingreader;
 				SWIFT_OBJC_BRIDGING_HEADER = "ingreader/ingreader-Bridging-Header.h";
@@ -541,11 +525,7 @@
 				INFOPLIST_FILE = ingreader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "lk.si.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = ingreader;
 				SWIFT_OBJC_BRIDGING_HEADER = "ingreader/ingreader-Bridging-Header.h";

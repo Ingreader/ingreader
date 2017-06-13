@@ -68,8 +68,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WLd-hS-0na">
                                 <rect key="frame" x="0.0" y="64" width="375" height="557"/>
                             </imageView>
-                            <progressView contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="IW5-bw-Q9L">
-                                <rect key="frame" x="0.0" y="554" width="600" height="2"/>
+                            <progressView contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="IW5-bw-Q9L">
+                                <rect key="frame" x="0.0" y="621" width="375" height="2"/>
                                 <color key="progressTintColor" red="0.73157179355621338" green="0.090995259582996368" blue="0.46332496404647827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                         </subviews>
@@ -115,7 +115,7 @@
                                 <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bez-e5-mKW" id="Zk7-oe-yxC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
