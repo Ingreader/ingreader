@@ -92,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		244B94061EF09DA60097B7D6 /* ImageFilterClasses */ = {
+			isa = PBXGroup;
+			children = (
+				24B8918D19694D920092D5CD /* KWBinarizeFilter.h */,
+				24B8918E19694D920092D5CD /* KWBinarizeFilter.m */,
+				24901CE019682BCA00A79DE1 /* KWFilters.swift */,
+			);
+			name = ImageFilterClasses;
+			sourceTree = "<group>";
+		};
 		24C3821119410E2B00674D27 = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				249E7FE71A953B1100BE8C0D /* tessdata */,
-				24B8918D19694D920092D5CD /* KWBinarizeFilter.h */,
-				24B8918E19694D920092D5CD /* KWBinarizeFilter.m */,
+				244B94061EF09DA60097B7D6 /* ImageFilterClasses */,
 				24714DFA1951B1520091DA29 /* ImagePlayground.playground */,
 				24C3821F19410E2B00674D27 /* AppDelegate.swift */,
 				249E7FEF1A95508200BE8C0D /* KWOcrResultProcessor.swift */,
@@ -130,7 +139,6 @@
 				24C3822619410E2B00674D27 /* Images.xcassets */,
 				24C3821D19410E2B00674D27 /* Supporting Files */,
 				24C3823E1941118200674D27 /* ingreader-Bridging-Header.h */,
-				24901CE019682BCA00A79DE1 /* KWFilters.swift */,
 			);
 			path = ingreader;
 			sourceTree = "<group>";
